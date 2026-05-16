@@ -37,7 +37,7 @@
 #   Each entry: name, status, source, referenced_by[], attributes{}, added, revised
 
 version: 1
-last_updated: ""
+last_updated: "2026-05-16"
 
 # ─── ENTITIES ────────────────────────────────────────────────────────────────
 # Named game-world objects: enemies, NPCs, characters, factions, bosses.
@@ -139,7 +139,66 @@ formulas: []
 #
 # Required fields: name, status, source, referenced_by, value, unit, added
 
-constants: []
+constants:
+  - name: server_tick_rate
+    status: active
+    source: design/gdd/networking-layer.md
+    referenced_by:
+      - design/gdd/networking-layer.md
+    value: 30
+    unit: Hz
+    added: 2026-05-16
+    revised: ""
+
+  - name: max_active_units
+    status: active
+    source: design/gdd/networking-layer.md
+    referenced_by:
+      - design/gdd/networking-layer.md
+    value: 30
+    unit: units
+    added: 2026-05-16
+    revised: ""
+
+  - name: host_bandwidth_ceiling
+    status: active
+    source: design/gdd/networking-layer.md
+    referenced_by:
+      - design/gdd/networking-layer.md
+    value: 200
+    unit: KB/s
+    added: 2026-05-16
+    revised: ""
+
+  - name: rtt_threshold_good
+    status: active
+    source: design/gdd/networking-layer.md
+    referenced_by:
+      - design/gdd/networking-layer.md
+    value: 80
+    unit: ms
+    added: 2026-05-16
+    revised: ""
+
+  - name: rtt_threshold_acceptable
+    status: active
+    source: design/gdd/networking-layer.md
+    referenced_by:
+      - design/gdd/networking-layer.md
+    value: 150
+    unit: ms
+    added: 2026-05-16
+    revised: ""
+
+  - name: rtt_threshold_degraded
+    status: active
+    source: design/gdd/networking-layer.md
+    referenced_by:
+      - design/gdd/networking-layer.md
+    value: 250
+    unit: ms
+    added: 2026-05-16
+    revised: ""
 
 # Example:
 #

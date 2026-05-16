@@ -27,7 +27,7 @@ toolsets that operate on top of it.
 
 | # | System Name | Category | Priority | Status | Design Doc | Depends On |
 |---|-------------|----------|----------|--------|------------|------------|
-| 1 | Networking Layer | Foundation | Vertical Slice | Not Started | — | — |
+| 1 | Networking Layer | Foundation | Vertical Slice | Designed | design/gdd/networking-layer.md | — |
 | 2 | Input System | Foundation | Vertical Slice | Not Started | — | — |
 | 3 | Event Bus (inferred) | Foundation | Vertical Slice | Not Started | — | — |
 | 4 | Match State Machine | Core | Vertical Slice | Not Started | — | F1, F3 |
@@ -207,10 +207,10 @@ are tracked in VS. The circular risk is avoided by staggered implementation scop
 | Metric | Count |
 |--------|-------|
 | Total systems identified | 30 |
-| Design docs started | 0 |
+| Design docs started | 1 |
 | Design docs reviewed | 0 |
 | Design docs approved | 0 |
-| Vertical Slice systems designed | 0 / 10 |
+| Vertical Slice systems designed | 1 / 10 |
 | MVP systems designed | 0 / 21 |
 | Launch systems designed | 0 / 29 |
 

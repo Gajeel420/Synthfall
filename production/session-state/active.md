@@ -11,27 +11,31 @@
 - [x] Mapped dependencies across 5 layers
 - [x] Assigned priority tiers (Vertical Slice / MVP / Launch / Live Ops)
 - [x] Wrote systems index (design/gdd/systems-index.md)
+- [x] Designed Networking Layer GDD — all 8 sections complete
 
 ## Active Files
 
-- `design/gdd/systems-index.md` — written, Draft status
-- `design/gdd/networking-layer.md` — not yet created (next task)
+- `design/gdd/systems-index.md` — 1/10 VS systems designed
+- `design/gdd/networking-layer.md` — COMPLETE (Designed, pending review)
+- `design/registry/entities.yaml` — 6 constants registered
 
 ## Key Decisions Made
 
-- Added **Vertical Slice** tier (10 systems) before MVP (21 systems) — solo/small team scope management
-- Options A+C considered: chose A only (keep F2/F3/R6 as GDDs, not just ADRs)
+- Added **Vertical Slice** tier (10 systems) before MVP — solo/small team scope management
 - Design order: Networking Layer → Input System → Event Bus → Match State → Role System → Corruption Meter → Win/Loss → Movement → Sensor Grid → Hive Mind View
-- NGO 2.X is mandatory (1.X deprecated in Unity 6.3) — flagged as CRITICAL in breaking-changes.md
-- 4 high-risk systems: Networking Layer, Corruption Meter, Unit AI, Class Ability System
+- NGO 2.X mandatory; listen-server topology for VS/MVP; dedicated server at Launch
+- **Hive Mind owns nothing** — all actions via ServerRpc, server-delegated authority
+- Server tick rate: 30 Hz; max simultaneous units: 30; host upload ceiling: 200 KB/s
+- Latency tiers: Good ≤80ms / Acceptable ≤150ms / Degraded ≤250ms
+- 28 acceptance criteria; test dirs `tests/unit/networking/` + `tests/integration/networking/` required before stories can be marked Done
 
 ## Next Step
 
-Designing networking-layer.md section by section. Skeleton created.
-Currently on: Section A — Overview
+Run `/design-review design/gdd/networking-layer.md` in a **fresh session** to validate.
+Then: `/design-system input-system` (next in design order, no mutual dependency with event-bus — can be done in parallel).
 
 <!-- STATUS -->
 Epic: Systems Design
-Feature: Networking Layer GDD
-Task: Section A — Overview
+Feature: Systems Index + Networking Layer GDD
+Task: Complete — pending design review
 <!-- /STATUS -->
